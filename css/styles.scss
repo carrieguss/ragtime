@@ -71,7 +71,7 @@ ul {
   overflow: hidden;
 }
 .sidebar {
-  width: 30%;
+  width: 25%;
   float: left;
   ul {
     &#side-nav {
@@ -101,8 +101,25 @@ ul {
 }
 
 .content {
-  width: 70%;
+  width: 75%;
   float: right;
+}
+.thumbs {
+  float: left;
+  width: 40%;
+  img {
+    float: left;
+    width: 33%;
+    padding: 5px;
+  }
+}
+.full {
+  float: left;
+  padding-left: 50px;
+  width: 60%;
+  img {
+    width: 100%;
+  }
 }
 
 // Create mixin
@@ -205,71 +222,72 @@ img.gal {
   }
 }
 
-@media all and (max-width: 700px) {
+// @media all and (max-width: 700px) {
 
-  .logo {
-    width: 100%;
-    h1 {
-      font-size: 42px;
-    }
-  }
+//   .logo {
+//     width: 100%;
+//     h1 {
+//       font-size: 42px;
+//     }
+//   }
 
-  ul {
-    &#main-nav {
-      margin: 10px 0;
-      padding: 0;
-      float: left;
-      li {
-        list-style: none;
-        float: left;
-        a {
-          margin-left: 0;
-          margin-right: 15px;
-          font-size: 14px;
-        }
-      } // End li styles
-    } // End main-nav styles
-  } // End ul styles
+//   ul {
+//     &#main-nav {
+//       margin: 10px 0;
+//       padding: 0;
+//       float: left;
+//       li {
+//         list-style: none;
+//         float: left;
+//         a {
+//           margin-left: 0;
+//           margin-right: 15px;
+//           font-size: 14px;
+//         }
+//       } // End li styles
+//     } // End main-nav styles
+//   } // End ul styles
 
-  .sidebar {
-    width: 45%;
-    ul {
-      &#side-nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 24px;
-          a {
-            text-decoration: none;
-            color: inherit;
-            &.active {
-              color: #ED0707;
-              &:hover {
-                border: none;
-              }
-            }
-            &:hover {
-              border-bottom: 2px dotted #ED0707;
-            }
-          }
-        }
-      }
-    }
-  }
-  .content {
-    width: 55%;
-  }
+//   .sidebar {
+//     width: 45%;
+//     ul {
+//       &#side-nav {
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//         li {
+//           font-size: 14px;
+//           font-weight: 700;
+//           line-height: 24px;
+//           a {
+//             text-decoration: none;
+//             color: inherit;
+//             &.active {
+//               color: #ED0707;
+//               &:hover {
+//                 border: none;
+//               }
+//             }
+//             &:hover {
+//               border-bottom: 2px dotted #ED0707;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .content {
+//     width: 55%;
+//   }
 
-} // End max-width 700px styles
+// } // End max-width 700px styles
 
 @media all and (max-width: 600px) {
   .menu-container {
     text-align: center;
   }
 .logo {
+  width: 100%;
   background-color: #fff;
   padding-bottom: 10px;
   h1 {
@@ -283,6 +301,7 @@ img.gal {
 
   ul {
     &#main-nav {
+      margin: 10px 0;
       padding: 0;
       float: none;
       li {

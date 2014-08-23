@@ -179,7 +179,7 @@ ul#main-nav {
   overflow: hidden; }
 
 .sidebar {
-  width: 30%;
+  width: 25%;
   float: left; }
   .sidebar ul#side-nav {
     list-style: none;
@@ -200,8 +200,23 @@ ul#main-nav {
           border-bottom: 2px dotted #ED0707; }
 
 .content {
-  width: 70%;
+  width: 75%;
   float: right; }
+
+.thumbs {
+  float: left;
+  width: 40%; }
+  .thumbs img {
+    float: left;
+    width: 33%;
+    padding: 5px; }
+
+.full {
+  float: left;
+  padding-left: 50px;
+  width: 60%; }
+  .full img {
+    width: 100%; }
 
 .block1,
 .block3 {
@@ -282,51 +297,12 @@ img.gal {
 
   .content {
     width: 60%; } }
-@media all and (max-width: 700px) {
-  .logo {
-    width: 100%; }
-    .logo h1 {
-      font-size: 42px; }
-
-  ul#main-nav {
-    margin: 10px 0;
-    padding: 0;
-    float: left; }
-    ul#main-nav li {
-      list-style: none;
-      float: left; }
-      ul#main-nav li a {
-        margin-left: 0;
-        margin-right: 15px;
-        font-size: 14px; }
-
-  .sidebar {
-    width: 45%; }
-    .sidebar ul#side-nav {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      .sidebar ul#side-nav li {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 24px; }
-        .sidebar ul#side-nav li a {
-          text-decoration: none;
-          color: inherit; }
-          .sidebar ul#side-nav li a.active {
-            color: #ED0707; }
-            .sidebar ul#side-nav li a.active:hover {
-              border: none; }
-          .sidebar ul#side-nav li a:hover {
-            border-bottom: 2px dotted #ED0707; }
-
-  .content {
-    width: 55%; } }
 @media all and (max-width: 600px) {
   .menu-container {
     text-align: center; }
 
   .logo {
+    width: 100%;
     background-color: #fff;
     padding-bottom: 10px; }
     .logo h1 {
@@ -337,6 +313,7 @@ img.gal {
     padding: 5px; }
 
   ul#main-nav {
+    margin: 10px 0;
     padding: 0;
     float: none; }
     ul#main-nav li {
