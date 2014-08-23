@@ -140,9 +140,12 @@ h5 {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  padding: 5px 0px;
+  border-bottom: 1.5px dotted #999; }
   a:hover {
-    color: red; }
+    color: #D60000;
+    border-bottom: 1.5px dotted #D60000; }
 
 aside {
   position: relative; }
@@ -152,16 +155,10 @@ aside {
     font-weight: 400;
     letter-spacing: 1px; }
     aside h3 span {
-      padding: 5px 0px;
-      margin: 0px 20px 0px 0px;
-      border-bottom: 1.5px dotted #999; }
+      margin: 0px 20px 0px 0px; }
       aside h3 span.sans {
         font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
         color: #999; }
-
-span:hover {
-  cursor: pointer;
-  border-bottom: 1.5px dotted red; }
 
 /* Class name via Modernizr */
 .csstransforms aside {
@@ -187,7 +184,7 @@ span:hover {
   -o-transform: rotate(90deg); }
 
 .centerHeader {
-  width: 300px;
+  width: 305px;
   height: 75px;
   background-color: white;
   color: black;
@@ -201,7 +198,7 @@ span:hover {
     font-size: 49px;
     margin: 0;
     padding: 0;
-    border-bottom: 2px solid red; }
+    border-bottom: 2px solid #D60000; }
     .centerHeader h1 .smallRaised {
       font-size: 14px;
       vertical-align: top; }
