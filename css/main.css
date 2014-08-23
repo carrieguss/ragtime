@@ -147,65 +147,110 @@ a {
     color: #D60000;
     border-bottom: 1.5px dotted #D60000; }
 
-aside {
-  position: relative; }
-  aside h3 {
-    font-size: 16px;
-    color: #777;
-    font-weight: 400;
-    letter-spacing: 1px; }
-    aside h3 span {
-      margin: 0px 20px 0px 0px; }
-      aside h3 span.sans {
-        font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
-        color: #999; }
+@media all and (max-width: 700px) {
+  .centerHeader {
+    width: 175px;
+    height: 75px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 50px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .centerHeader h1 {
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #D60000; }
+      .centerHeader h1 .smallRaised {
+        font-size: 12px;
+        vertical-align: top; }
+    .centerHeader p {
+      margin: 0;
+      padding: 5px 0px;
+      font-size: 10px; }
+      .centerHeader p .smallRaised {
+        font-size: 8px;
+        vertical-align: top; }
 
-/* Class name via Modernizr */
-.csstransforms aside {
-  border-left: 34px solid #369;
-  /* Make a little room */
-  padding-left: 10px; }
+  aside {
+    width: 100%;
+    margin-top: 150px; }
+    aside h3 {
+      margin: 0 auto;
+      font-size: 16px;
+      color: #777;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center; }
+      aside h3 span {
+        display: block;
+        margin: 25px; }
+        aside h3 span.sans {
+          font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
+          color: #999; } }
+@media all and (min-width: 700px) {
+  aside {
+    position: relative; }
+    aside h3 {
+      font-size: 16px;
+      color: #777;
+      font-weight: 400;
+      letter-spacing: 1px; }
+      aside h3 span {
+        margin: 0px 20px 0px 0px; }
+        aside h3 span.sans {
+          font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
+          color: #999; }
 
-.csstransforms aside h3 {
-  /* Abs positioning makes it not take up vert space */
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  /* Border is the new background */
-  background: none;
-  /* Rotate from top left corner (not default) */
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg); }
+  /* Class name via Modernizr */
+  .csstransforms aside {
+    border-left: 34px solid #369;
+    /* Make a little room */
+    padding-left: 10px; }
 
-.centerHeader {
-  width: 305px;
-  height: 75px;
-  background-color: white;
-  color: black;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto; }
-  .centerHeader h1 {
-    font-size: 49px;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid #D60000; }
-    .centerHeader h1 .smallRaised {
-      font-size: 14px;
-      vertical-align: top; }
-  .centerHeader p {
-    margin: 0;
-    padding: 5px 0px;
-    font-size: 13px; }
-    .centerHeader p .smallRaised {
-      font-size: 10px;
-      vertical-align: top; }
+  .csstransforms aside h3 {
+    /* Abs positioning makes it not take up vert space */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* Border is the new background */
+    background: none;
+    /* Rotate from top left corner (not default) */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+
+  .centerHeader {
+    width: 305px;
+    height: 75px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .centerHeader h1 {
+      font-size: 49px;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #D60000; }
+      .centerHeader h1 .smallRaised {
+        font-size: 14px;
+        vertical-align: top; }
+    .centerHeader p {
+      margin: 0;
+      padding: 5px 0px;
+      font-size: 13px; }
+      .centerHeader p .smallRaised {
+        font-size: 10px;
+        vertical-align: top; } }

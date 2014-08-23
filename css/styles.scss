@@ -190,3 +190,165 @@ img.gal {
   overflow: hidden;
   clear: both;
 }
+
+
+// ******************************
+// Responsivate those styles, bud
+// ******************************
+
+@media all and (max-width: 860px) {
+  .sidebar {
+    width: 40%;
+  }
+  .content {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 700px) {
+
+  .logo {
+    width: 100%;
+    h1 {
+      font-size: 42px;
+    }
+  }
+
+  ul {
+    &#main-nav {
+      margin: 10px 0;
+      padding: 0;
+      float: left;
+      li {
+        list-style: none;
+        float: left;
+        a {
+          margin-left: 0;
+          margin-right: 15px;
+          font-size: 14px;
+        }
+      } // End li styles
+    } // End main-nav styles
+  } // End ul styles
+
+  .sidebar {
+    width: 45%;
+    ul {
+      &#side-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+          a {
+            text-decoration: none;
+            color: inherit;
+            &.active {
+              color: #ED0707;
+              &:hover {
+                border: none;
+              }
+            }
+            &:hover {
+              border-bottom: 2px dotted #ED0707;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    width: 55%;
+  }
+
+} // End max-width 700px styles
+
+@media all and (max-width: 600px) {
+  .menu-container {
+    text-align: center;
+  }
+.logo {
+  background-color: #fff;
+  padding-bottom: 10px;
+  h1 {
+    font-size: 34px;
+  }
+}
+.nav-responsive {
+  background-color: #000;
+  padding: 5px;
+}
+
+  ul {
+    &#main-nav {
+      padding: 0;
+      float: none;
+      li {
+        margin-top: 10px;
+        list-style: none;
+        float: none;
+        a {
+          color: #fff;
+          margin: 10px;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          &:hover {
+            border-bottom: 2px solid #fff;
+          }
+          &.active {
+            display: none;
+          }
+        }
+      } // End li styles
+    } // End main-nav styles
+  } // End ul styles
+
+  .sidebar {
+    width: 100%;
+    ul {
+      &#side-nav {
+        li {
+          &.active {
+            background-color: #333;
+            &:hover {
+              background-color: #222;
+            }
+          }
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 32px;
+          text-align: center;
+          border-bottom: 1px solid #333;
+            &:hover {
+              background-color: yellow;
+              color: #666;
+            }
+          a {
+            text-decoration: none;
+            color: inherit;
+            &.active {
+              color: yellow;
+              &:hover {
+                border: none;
+                color: #eee;
+              }
+            }
+            &:hover {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    width: 100%;
+  }
+  .footer {
+    text-align: center;
+    font-size: 14px;
+  }
+} // End max-width 600px

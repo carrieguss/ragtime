@@ -28,6 +28,69 @@ a {
   }
 }
 
+// ******************************
+// Responsivate those styles, bud
+// ******************************
+
+@media all and (max-width: 700px) {
+  .centerHeader {
+    width: 175px;
+    height: 75px;
+    background-color: white;
+    color: black;
+
+    position: absolute;
+    top: 50px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    h1 {
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #D60000;
+      .smallRaised {
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 5px 0px;
+      font-size: 10px;
+      .smallRaised {
+        font-size: 8px;
+        vertical-align: top;
+      }
+    }
+  }
+  aside {
+    width: 100%;
+    margin-top: 150px;
+    h3 {
+      margin: 0 auto;
+      font-size: 16px;
+      color: #777;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      span {
+        display: block;
+        margin: 25px;
+        &.sans {
+          font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 700px) {
+
 aside {
     position: relative;  
   h3 {
@@ -106,3 +169,6 @@ aside {
     }
   }
 }
+
+}
+
