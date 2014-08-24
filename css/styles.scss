@@ -71,7 +71,7 @@ ul {
   overflow: hidden;
 }
 .sidebar {
-  width: 25%;
+  width: 20%;
   float: left;
   ul {
     &#side-nav {
@@ -101,13 +101,24 @@ ul {
 }
 
 .content {
-  width: 75%;
+  width: 80%;
   float: right;
 }
 .thumbs {
-  float: left;
-  width: 40%;
+  float: right;
+  width: 33%;
   img {
+    cursor: pointer;
+    float: left;
+    width: 33%;
+    padding: 5px;
+  }
+}
+.thumbs-i {
+  float: left;
+  width: 33%;
+  img {
+    cursor: pointer;
     float: left;
     width: 33%;
     padding: 5px;
@@ -115,10 +126,40 @@ ul {
 }
 .full {
   float: left;
-  padding-left: 50px;
-  width: 60%;
+  width: 65%;
   img {
     width: 100%;
+  }
+}
+.full-i {
+  float: right;
+  width: 65%;
+  img {
+    width: 100%;
+  }
+}
+
+// *************
+// Slider styles
+// *************
+
+.slide-viewer {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  .slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      &:first-child {
+        display: block;
+      }
+    }
   }
 }
 
@@ -213,15 +254,49 @@ img.gal {
 // Responsivate those styles, bud
 // ******************************
 
-@media all and (max-width: 860px) {
+@media all and (max-width: 1260px) {
+  .sidebar {
+    width: 25%;
+  }
+  .content {
+    width: 75%;
+  }
+}
+@media all and (max-width: 960px) {
+  .sidebar {
+    width: 30%;
+  }
+  .content {
+    width: 70%;
+    .thumbs, .thumbs-i {
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 870px) {
   .sidebar {
     width: 40%;
   }
   .content {
     width: 60%;
+    .full, .full-i {
+      width: 100%;
+      padding-left: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .thumbs, .thumbs-i {
+      width: 100%;
+      img {
+        width: 25%;
+      }
+    }
   }
 }
-
 // @media all and (max-width: 700px) {
 
 //   .logo {

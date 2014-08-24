@@ -2,70 +2,92 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-<!--	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'> -->
+	<title>Photography</title>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Lora:400,700|Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<div class="mega-wrapper">
-	<div class="menu-container">
-		<div class="logo">
-			<!-- <h1>Carrie <br><span id="last">Guss</span></h1> -->
-			<h1><a href="index.html">Carrie Guss</a></h1>
-		</div>
-		<ul id="main-nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a class="active" href="portfolio.html">Portfolio</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
+	<body>
+		<div class="mega-wrapper">
+			<div class="menu-container">
+				<div class="logo">
+					<!-- <h1>Carrie <br><span id="last">Guss</span></h1> -->
+					<h1><a href="index.html">Carrie Guss</a></h1>
+				</div>
+				<div class="nav-responsive">
+					<ul id="main-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a class="active" href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
 
-	</div> <!--End menu container -->
-<div class="body-wrapper">
-	<div class="sidebar">
-		<nav>
-			<ul id="side-nav">
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="print.html">Illustration and Print Work</a></li>
-				<li><a href="drawings.html">Drawings</a></li>
-				<li><a class="active" href="photography.html">Photography</a></li>
-				<li><a href="web.html">Web Design</a></li>
-				<li><a href="projects.html">Active Projects</a></li>
-			</ul>
-		</nav>
-	</div>
+			</div> <!--End menu container -->
+			<div class="body-wrapper">
+				<div class="sidebar">
+					<nav>
+						<ul id="side-nav">
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="print.html">Illustration and Print Work</a></li>
+							<li><a href="drawings.html">Drawings</a></li>
+							<li class="active"><a class="active" href="photography.html">Photography</a></li>
+							<li><a href="web.html">Web Design</a></li>
+							<li><a href="projects.html">Active Projects</a></li>
+						</ul>
+					</nav>
+				</div>
 
-	<div class="content">
-		<div class="block-half1">
-			<img src="images/photography/elvis1.jpg">
-			<img src="images/photography/elvis3.jpg">
-			<img src="images/photography/elvis4.jpg">
-			<img src="images/photography/civic2.jpg">
-			<img src="images/photography/ph1.jpg">
-			<img src="images/photography/ph2.jpg">
-			<img src="images/photography/ph5.jpg">
-			<img src="images/photography/ph7.jpg">
-			<img src="images/photography/ph8.jpg">
-		</div>
-		<div class="block-half2">
-			<img src="images/photography/elvis2.jpg">
-			<img src="images/photography/elvis5.jpg">
-			<img src="images/photography/civic1.jpg">
-			<img src="images/photography/civil1.jpg">
-			<img src="images/photography/ph3.jpg">
-			<img src="images/photography/ph4.jpg">
-			<img src="images/photography/ph6.jpg">
-			<!-- <img src="images/photography/ph9.jpg"> -->
-		</div>
-	</div> <!-- End main content -->
-</div> <!-- End body wrapper -->
+				<div class="content">
+					<div class="flexslider">
+					  <ul class="slides">
+					    <li>
+					      <img src="images/photo/civic1.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/civic2.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/civil1.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/elvis1.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/elvis2.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/elvis3.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/elvis4.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/elvis5.jpg" alt="">
+					    </li>
+					    <li>
+					      <img src="images/photo/phcrop3.jpg" alt="">
+					    </li>
+					  </ul>
+					</div>				
+				</div> <!-- End main content -->
+			</div> <!-- End body wrapper -->
 
-	<div class="footer">
-		<p>&#169; Carrie Guss 2014</p>
-	</div>
-</div> <!-- End mega wrapper -->
-
-</body>
+			<div class="footer">
+				<p>&#169; Carrie Guss 2014</p>
+			</div>
+		</div> <!-- End mega wrapper -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="css/jquery.flexslider.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+					// smoothHeight: true,
+					slideshow: false,
+					video: false,
+				});
+			});
+		</script>
+	</body>
 </html>
