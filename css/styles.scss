@@ -9,11 +9,14 @@ body {
   font-size: 16px;
   font-weight: 300;
   font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .mega-wrapper {
   max-width: 1300px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .menu-container {
@@ -70,6 +73,12 @@ ul {
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
+.body-wrapper-collapse {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+}
 .sidebar {
   width: 20%;
   float: left;
@@ -102,6 +111,10 @@ ul {
 
 .content {
   width: 80%;
+  float: right;
+}
+.content-ph {
+  width: 75%;
   float: right;
 }
 .thumbs {
@@ -138,6 +151,12 @@ ul {
     width: 100%;
   }
 }
+.tab-panel {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 
 // *************
 // Slider styles
@@ -163,6 +182,47 @@ ul {
   }
 }
 
+#accordion {
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    font-family: 'Lora', 'Times New Roman', 'Lucida Bright', 'Palatino', Georgia, serif;
+    font-size: 15px;
+    color: #333;
+  }
+  .ui-widget {
+
+  }
+  .ui-accordion {
+
+  } // The outer container of the accordion.
+  
+.ui-state-default {
+  font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+  background: #fff url();
+}
+
+  .ui-accordion-header {
+    border: 1px solid #333;
+    outline: 0;
+    background-color: #fff;
+    color: #000;
+
+  } //The headers of the accordion. The headers will additionally have a ui-accordion-icons class if they contain icons.
+  
+  .ui-accordion-content{
+    border: 1px solid #333;
+    border-top: 0;
+    padding: 0 15px;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  } // The content panels of the accordion.
+}
+
 // Create mixin
 @mixin gallery-box ($width) {
   float: left;
@@ -171,17 +231,6 @@ ul {
 }
 
 // Apply mixin
-.block1,
-.block3 {
-  @include gallery-box (40%);
-}  
-.block2 {
-  @include gallery-box (20%);
-}
-.block3 {
-  padding-right: 0px;
-  margin-right: 0px;
-}
 .block {
   @include gallery-box (100%);
   text-align: right;
@@ -195,50 +244,6 @@ ul {
     // box-shadow: 0px 0px 10px #666;
   }
 }
-.block-left {
-  width: 33%;
-  float: left;
-  padding: 0px 10px 20px 10px;
-  img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-.block-mid {
-  width: 33%;
-  float: left;
-  padding: 0px 10px 20px 10px;
-  img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-.block-right {
-  width: 33%;
-  float: left;
-  padding: 0px 10px;
-  img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-.block-half1,
-.block-half2 {
-  width: 100%;
-  float: left;
-  padding: 0px 0px 0px 15px;
-  img {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-}
-img.gal {
-  width: 100%;
-  box-shadow: -7px 7px 5px #666;
-  .small {
-    margin-bottom: 10px;
-  }
-}
 .footer {
   color: #999;
   text-align: right;
@@ -248,7 +253,15 @@ img.gal {
   overflow: hidden;
   clear: both;
 }
-
+.footer-accordion {
+  color: #999;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  clear: both;
+}
 
 // ******************************
 // Responsivate those styles, bud
@@ -266,7 +279,7 @@ img.gal {
   .sidebar {
     width: 30%;
   }
-  .content {
+  .content, .content-ph {
     width: 70%;
     .thumbs, .thumbs-i {
       img {
@@ -280,7 +293,7 @@ img.gal {
   .sidebar {
     width: 40%;
   }
-  .content {
+  .content, .content-ph {
     width: 60%;
     .full, .full-i {
       width: 100%;
@@ -297,69 +310,12 @@ img.gal {
     }
   }
 }
-// @media all and (max-width: 700px) {
-
-//   .logo {
-//     width: 100%;
-//     h1 {
-//       font-size: 42px;
-//     }
-//   }
-
-//   ul {
-//     &#main-nav {
-//       margin: 10px 0;
-//       padding: 0;
-//       float: left;
-//       li {
-//         list-style: none;
-//         float: left;
-//         a {
-//           margin-left: 0;
-//           margin-right: 15px;
-//           font-size: 14px;
-//         }
-//       } // End li styles
-//     } // End main-nav styles
-//   } // End ul styles
-
-//   .sidebar {
-//     width: 45%;
-//     ul {
-//       &#side-nav {
-//         list-style: none;
-//         margin: 0;
-//         padding: 0;
-//         li {
-//           font-size: 14px;
-//           font-weight: 700;
-//           line-height: 24px;
-//           a {
-//             text-decoration: none;
-//             color: inherit;
-//             &.active {
-//               color: #ED0707;
-//               &:hover {
-//                 border: none;
-//               }
-//             }
-//             &:hover {
-//               border-bottom: 2px dotted #ED0707;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   .content {
-//     width: 55%;
-//   }
-
-// } // End max-width 700px styles
 
 @media all and (max-width: 600px) {
   .menu-container {
     text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0;
   }
 .logo {
   width: 100%;
@@ -368,6 +324,9 @@ img.gal {
   h1 {
     font-size: 34px;
   }
+}
+.body-wrapper-collapse {
+  padding-top: 0px;
 }
 .nav-responsive {
   background-color: #000;
@@ -438,10 +397,19 @@ img.gal {
       }
     }
   }
-  .content {
+  .content, .content-ph {
     width: 100%;
   }
+  #accordion {
+    padding-top: 10px;
+  }
   .footer {
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer-accordion {
+    position: relative;
+    display: block;
     text-align: center;
     font-size: 14px;
   }

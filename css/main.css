@@ -170,7 +170,8 @@ a {
     .centerHeader p {
       margin: 0;
       padding: 5px 0px;
-      font-size: 10px; }
+      font-size: 10px;
+      text-align: center; }
       .centerHeader p .smallRaised {
         font-size: 8px;
         vertical-align: top; }

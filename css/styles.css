@@ -129,11 +129,14 @@ body {
   color: #444;
   font-size: 16px;
   font-weight: 300;
-  font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif; }
+  font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 .mega-wrapper {
   max-width: 1300px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .menu-container {
   margin: 0;
@@ -178,6 +181,12 @@ ul#main-nav {
   border-bottom: 1px solid #eee;
   overflow: hidden; }
 
+.body-wrapper-collapse {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  overflow: hidden; }
+
 .sidebar {
   width: 20%;
   float: left; }
@@ -201,6 +210,10 @@ ul#main-nav {
 
 .content {
   width: 80%;
+  float: right; }
+
+.content-ph {
+  width: 75%;
   float: right; }
 
 .thumbs {
@@ -233,6 +246,11 @@ ul#main-nav {
   .full-i img {
     width: 100%; }
 
+.tab-panel {
+  display: none; }
+  .tab-panel.active {
+    display: block; }
+
 .slide-viewer {
   position: relative;
   overflow: hidden;
@@ -249,20 +267,28 @@ ul#main-nav {
       .slide-viewer .slide-group .slide:first-child {
         display: block; }
 
-.block1,
-.block3 {
-  float: left;
-  width: 40%;
-  padding: 10px; }
-
-.block2 {
-  float: left;
-  width: 20%;
-  padding: 10px; }
-
-.block3 {
-  padding-right: 0px;
-  margin-right: 0px; }
+#accordion h3 {
+  font-size: 16px;
+  font-weight: 700; }
+#accordion p {
+  font-family: 'Lora', 'Times New Roman', 'Lucida Bright', 'Palatino', Georgia, serif;
+  font-size: 15px;
+  color: #333; }
+#accordion .ui-state-default {
+  font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+  background: white url(); }
+#accordion .ui-accordion-header {
+  border: 1px solid #333;
+  outline: 0;
+  background-color: #fff;
+  color: #000; }
+#accordion .ui-accordion-content {
+  border: 1px solid #333;
+  border-top: 0;
+  padding: 0 15px; }
+  #accordion .ui-accordion-content ul {
+    list-style: none;
+    padding: 0; }
 
 .block {
   float: left;
@@ -273,49 +299,18 @@ ul#main-nav {
   .block img {
     width: 100%; }
 
-.block-left {
-  width: 33%;
-  float: left;
-  padding: 0px 10px 20px 10px; }
-  .block-left img {
-    width: 100%;
-    margin-bottom: 20px; }
-
-.block-mid {
-  width: 33%;
-  float: left;
-  padding: 0px 10px 20px 10px; }
-  .block-mid img {
-    width: 100%;
-    margin-bottom: 20px; }
-
-.block-right {
-  width: 33%;
-  float: left;
-  padding: 0px 10px; }
-  .block-right img {
-    width: 100%;
-    margin-bottom: 20px; }
-
-.block-half1,
-.block-half2 {
-  width: 100%;
-  float: left;
-  padding: 0px 0px 0px 15px; }
-  .block-half1 img,
-  .block-half2 img {
-    width: 100%;
-    margin-bottom: 15px; }
-
-img.gal {
-  width: 100%;
-  box-shadow: -7px 7px 5px #666; }
-  img.gal .small {
-    margin-bottom: 10px; }
-
 .footer {
   color: #999;
   text-align: right;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  clear: both; }
+
+.footer-accordion {
+  color: #999;
+  text-align: left;
   width: 100%;
   margin: 0;
   padding: 20px;
@@ -332,28 +327,30 @@ img.gal {
   .sidebar {
     width: 30%; }
 
-  .content {
+  .content, .content-ph {
     width: 70%; }
-    .content .thumbs img, .content .thumbs-i img {
+    .content .thumbs img, .content .thumbs-i img, .content-ph .thumbs img, .content-ph .thumbs-i img {
       width: 50%; } }
 @media all and (max-width: 870px) {
   .sidebar {
     width: 40%; }
 
-  .content {
+  .content, .content-ph {
     width: 60%; }
-    .content .full, .content .full-i {
+    .content .full, .content .full-i, .content-ph .full, .content-ph .full-i {
       width: 100%;
       padding-left: 0; }
-      .content .full img, .content .full-i img {
+      .content .full img, .content .full-i img, .content-ph .full img, .content-ph .full-i img {
         width: 100%; }
-    .content .thumbs, .content .thumbs-i {
+    .content .thumbs, .content .thumbs-i, .content-ph .thumbs, .content-ph .thumbs-i {
       width: 100%; }
-      .content .thumbs img, .content .thumbs-i img {
+      .content .thumbs img, .content .thumbs-i img, .content-ph .thumbs img, .content-ph .thumbs-i img {
         width: 25%; } }
 @media all and (max-width: 600px) {
   .menu-container {
-    text-align: center; }
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0; }
 
   .logo {
     width: 100%;
@@ -361,6 +358,9 @@ img.gal {
     padding-bottom: 10px; }
     .logo h1 {
       font-size: 34px; }
+
+  .body-wrapper-collapse {
+    padding-top: 0px; }
 
   .nav-responsive {
     background-color: #000;
@@ -411,9 +411,18 @@ img.gal {
         .sidebar ul#side-nav li a:hover {
           border: none; }
 
-  .content {
+  .content, .content-ph {
     width: 100%; }
 
+  #accordion {
+    padding-top: 10px; }
+
   .footer {
+    text-align: center;
+    font-size: 14px; }
+
+  .footer-accordion {
+    position: relative;
+    display: block;
     text-align: center;
     font-size: 14px; } }

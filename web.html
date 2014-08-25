@@ -2,59 +2,86 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-<!--	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'> -->
+	<title>Web Development</title>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Lora:400,700|Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
 </head>
-<body>
-<div class="mega-wrapper">
-	<div class="menu-container">
-		<div class="logo">
-			<!-- <h1>Carrie <br><span id="last">Guss</span></h1> -->
-			<h1><a href="index.html">Carrie Guss</a></h1>
-		</div>
-		<ul id="main-nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a class="active" href="portfolio.html">Portfolio</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
+	<body>
+		<div class="mega-wrapper">
+			<div class="menu-container">
+				<div class="logo">
+					<!-- <h1>Carrie <br><span id="last">Guss</span></h1> -->
+					<h1><a href="index.html">Carrie Guss</a></h1>
+				</div>
+				<div class="nav-responsive">
+					<ul id="main-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a class="active" href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
 
-	</div> <!--End menu container -->
-<div class="body-wrapper">
-	<div class="sidebar">
-		<nav>
-			<ul id="side-nav">
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="print.html">Illustration and Print Work</a></li>
-				<li><a href="drawings.html">Drawings</a></li>
-				<li><a href="photography.html">Photography</a></li>
-				<li><a class="active" href="web.html">Web Design</a></li>
-				<li><a href="projects.html">Active Projects</a></li>
-			</ul>
-		</nav>
-	</div>
+			</div> <!--End menu container -->
+			<div class="body-wrapper-collapse">
+				<div class="sidebar">
+					<nav>
+						<ul id="side-nav">
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="print.html">Illustration and Print Work</a></li>
+							<li><a href="drawings.html">Drawings</a></li>
+							<li><a href="photography.html">Photography</a></li>
+							<li class="active"><a class="active" href="web.html">Web Development</a></li>
+							<li><a href="projects.html">Other Projects</a></li>
+						</ul>
+					</nav>
+				</div>
 
-	<div class="content">
-		<div class="block1">
-			<img class="gal big" src="images/frame-publicity.jpg" alt="">
-		</div>
-		<div class="block2">
-			<img class="gal small" src="images/frame-illustration.png" alt="">
-			<img class="gal small" src="images/frame-drawing.png" alt="">
-		</div>
-		<div class="block3">
-			<img class="gal big" src="images/frame-otherprojects.jpg" alt="">
-		</div>
-	</div> <!-- End main content -->
-</div> <!-- End body wrapper -->
+				<div class="content">
+					<div id="accordion">
+						<h3>Case Study: Yelling About Sports</h3>
+						<div>
+							<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+						</div>
+						<h3>Case Study: WordPress Theme for Literary Journals &amp; Magazines</h3>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h3>Case Study: Custom-Designed Author Site</h3>
+						<div>
+							<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+							<ul>
+								<li>List item one</li>
+								<li>List item two</li>
+								<li>List item three</li>
+							</ul>
+						</div>
+						<h3>Case Study: JourneyMade -- Responsive Client Site</h3>
+						<div>
+							<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+						</div>
+					</div> <!-- End accordion -->
 
-	<div class="footer">
-		<p>&#169; Carrie Guss 2014</p>
-	</div>
-</div> <!-- End mega wrapper -->
+				</div> <!-- End main content -->
+			</div> <!-- End body wrapper -->
 
-</body>
+			<div class="footer-accordion">
+				<p>&#169; Carrie Guss 2014</p>
+			</div>
+
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+  </script>
+
+		</div> <!-- End mega wrapper -->
+	</body>
 </html>
