@@ -209,7 +209,16 @@ ul {
     outline: 0;
     background-color: #fff;
     color: #000;
-
+    // color: #D61A1A;
+    // &:nth-child(3) {
+    //   color: #FC6203;
+    // }
+    // &:nth-child(5) {
+    //   color: #FCB103;
+    // }
+    // &:nth-child(7) {
+    //   color: #15B3E8;
+    // }
   } //The headers of the accordion. The headers will additionally have a ui-accordion-icons class if they contain icons.
   
   .ui-accordion-content{
@@ -222,6 +231,7 @@ ul {
     }
   } // The content panels of the accordion.
 }
+
 
 // Create mixin
 @mixin gallery-box ($width) {
