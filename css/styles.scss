@@ -127,6 +127,7 @@ ul {
     padding: 5px;
   }
 }
+
 .thumbs-i {
   float: left;
   width: 33%;
@@ -244,9 +245,13 @@ ul {
       // width: 65%;
       // float: left;
       img {
+        z-index: 50;
         width: 100%;
         height: auto;
         border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
     .text-contain {
@@ -259,7 +264,6 @@ ul {
     }
   } // The content panels of the accordion.
 }
-
 // Create mixin
 @mixin gallery-box ($width) {
   float: left;
@@ -308,6 +312,41 @@ ul {
   padding: 20px;
   overflow: hidden;
   clear: both;
+}
+.comics, .b-signs {
+  width: 45%;
+  padding: 0;
+  margin: 0 2%;
+  float: left;
+  h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+} 
+.about-wrap {
+  width: 100%;
+  .left-sidebar {
+    width: 30%;
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.bio {
+  background-color: #fff;
+  width: 70%;
+  float: left;
+  padding-left: 15px;
 }
 
 // ******************************

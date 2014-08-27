@@ -299,9 +299,12 @@ ul#main-nav {
     list-style: none;
     padding: 0; }
   #accordion .ui-accordion-content .img-contain img {
+    z-index: 50;
     width: 100%;
     height: auto;
     border-radius: 5px; }
+    #accordion .ui-accordion-content .img-contain img:hover {
+      cursor: pointer; }
   #accordion .ui-accordion-content .text-contain {
     float: right;
     width: 30%; }
@@ -342,6 +345,37 @@ ul#main-nav {
   padding: 20px;
   overflow: hidden;
   clear: both; }
+
+.comics, .b-signs {
+  width: 45%;
+  padding: 0;
+  margin: 0 2%;
+  float: left; }
+  .comics h2, .b-signs h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    padding: 0; }
+  .comics img, .b-signs img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+
+.about-wrap {
+  width: 100%; }
+  .about-wrap .left-sidebar {
+    width: 30%;
+    float: left; }
+    .about-wrap .left-sidebar img {
+      width: 100%;
+      height: auto; }
+
+.bio {
+  background-color: #fff;
+  width: 70%;
+  float: left;
+  padding-left: 15px; }
 
 @media all and (max-width: 1260px) {
   .sidebar {
