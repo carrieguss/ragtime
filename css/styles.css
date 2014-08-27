@@ -138,11 +138,27 @@ body {
   margin: 0 auto;
   overflow: hidden; }
 
+.mega-wrapper-contact {
+  width: 100%;
+  margin: 0;
+  overflow: hidden; }
+
 .menu-container {
   margin: 0;
   width: 100%;
   padding: 20px;
   overflow: hidden; }
+
+.menu-container-contact {
+  margin: 0;
+  width: 100%;
+  padding: 20px 50px;
+  overflow: hidden;
+  background-color: #333; }
+  .menu-container-contact .logo h1 {
+    color: #eee; }
+  .menu-container-contact ul#main-nav li a {
+    color: #eee; }
 
 .logo {
   float: left; }
@@ -299,7 +315,6 @@ ul#main-nav {
     list-style: none;
     padding: 0; }
   #accordion .ui-accordion-content .img-contain img {
-    z-index: 50;
     width: 100%;
     height: auto;
     border-radius: 5px; }
@@ -377,6 +392,68 @@ ul#main-nav {
   float: left;
   padding-left: 15px; }
 
+/* Uncomment everything commented to CSS for the hide/show */
+.gallery-item {
+  height: auto;
+  width: 100%;
+  position: relative;
+  border-radius: 5px; }
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 5px; }
+
+.gallery-item:hover .img-title {
+  /*opacity: 1;*/ }
+
+.img-title {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  /*opacity: 0;*/
+  display: none;
+  /* comment this out for CSS hover */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0px 20px;
+  border-radius: 5px;
+  /*transition: all 0.5s ease;*/ }
+
+.img-title h5 {
+  font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+  color: #000;
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: left; }
+  .img-title h5 span.head-tit {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+    padding-top: 0;
+    margin-top: 0;
+    border-bottom: 3px solid #ED0707; }
+  .img-title h5 span.linkto {
+    color: #ED0707;
+    border-bottom: 1px solid #ED0707; }
+
+.body-wrapper-contact {
+  width: 100%;
+  padding: 0px 50px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden; }
+
+.contact-content .contact-form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
 @media all and (max-width: 1260px) {
   .sidebar {
     width: 25%; }
@@ -406,6 +483,11 @@ ul#main-nav {
       width: 100%; }
       .content .thumbs img, .content .thumbs-i img, .content-ph .thumbs img, .content-ph .thumbs-i img {
         width: 25%; } }
+@media all and (max-width: 750px) {
+  .contact-content .twitter-widget {
+    display: none; }
+  .contact-content .contact-form {
+    width: 100%; } }
 @media all and (max-width: 600px) {
   .menu-container {
     text-align: center;
@@ -485,4 +567,7 @@ ul#main-nav {
     position: relative;
     display: block;
     text-align: center;
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .contact-content .contact-form {
+    width: 100%; } }

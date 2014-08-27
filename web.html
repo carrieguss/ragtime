@@ -56,13 +56,29 @@
 					</div> -->
 					<div id="accordion">
 						<h3>WordPress Theme for Literary Journals &amp; Magazines </h3>
-						<div>
+						<div class="wrapper clearfix">
+							<figure class="gallery-item">
+								<a href="literarymagazine/index.html">
+        						<img src="images/web/litmag-mockup-resize.jpg">
+        						<figcaption class="img-title"> 
+            						<h5><span class="head-tit">The Project</span><br>Burdened with an overwhelming amount of content, most journal editors haven't touched their websites since 1991, let alone made them compatible for tablets or mobile devices. I designed this easily customizable WordPress theme to be clean, vibrant, and fully responsive, with a clear navigation system that tucks away clutter. A strong web presence can make content more accessible to current readers, and it can also draw in a broader audience, allowing people to explore and giving them the opportunity to subscribe. Old dusty bookstores: very good. Old dusty websites? No more! <span class="linkto">Click through to the live site.</span></h5> 
+        						</figcaption>
+        						</a>
+    						</figure>
+						</div>
+						<!-- <div>
+							<div class="builtwith">
+								<p>There are countless brilliant literary magazines, but storied histories come with an overwhelming amount of content, and most journal editors haven't touched their websites since 1991, let alone made them compatible for tablets or mobile devices. I designed this easily customizable WordPress theme to be clean, vibrant, and fully responsive, with a clear navigation system that tucks away clutter. A strong web presence can make content more accessible to current readers, and it can also draw in a broader audience, allowing people to explore and giving them the opportunity to subscribe. Old dusty bookstores: very good. Old dusty websites? No more!</p>
+								<p>Foundation: WordPress, PHP, CSS3</p> 
+								<p>Preview the site by clicking on the image!</p>
+							</div>
 							<div class="img-contain">
-							<a href="litjournal/index.html">
+							<a href="literarymagazine/index.html">
 								<img src="images/web/litmag-mockup-resize.jpg" alt="sports app">
 							</a>
-							</div>
-<!-- 							<div class="text-contain">
+							</div> PUT BACK IN UP TO HERE IF FAIL-->
+
+<!-- 				NOT THIS	<div class="text-contain">
 								<h3>Built with tongue in cheek and the following technologies:</h3>
 								<ul>
 									<li>HTML5</li>
@@ -75,12 +91,14 @@
 								
 							</div> -->
 <!-- 							<div class="clear"></div> -->
-						</div>
+<!-- 	PUT CLOSING TAG BACK IN					</div> -->
 						<h3>&#8220;Yelling About Sports&#8221; App</h3>
 						<div>
 						<div>
 							<div class="img-contain">
+							<a href="yellingaboutsports/index.html">
 								<img src="images/web/sports-mockup-1.jpg" alt="writer page">
+							</a>
 							</div>
 <!-- 							<div class="text-contain">
 								<h3>Built with tongue in cheek and the following technologies:</h3>
@@ -99,7 +117,9 @@
 						<h3>JourneyMade &#8212; Responsive Client Site</h3>
 						<div>
 							<div class="img-contain">
+							<a href="journeymade/index.html">
 								<img src="images/web/journeymade-mockup.jpg" alt="writer page">
+							</a>
 							</div>
 <!-- 							<div class="text-contain">
 								<h3>Built with tongue in cheek and the following technologies:</h3>
@@ -117,9 +137,12 @@
 						<h3>Custom-Designed Author Site</h3>
 						<div>
 							<div class="img-contain">
+							<a href="writerwebsite/index.html">
 								<img src="images/web/writer-mockup-resize.jpg" alt="writer page">
+							</a>
 							</div>
 						</div>
+
 					</div> <!-- End accordion -->
 
 				</div> <!-- End main content -->
@@ -134,6 +157,11 @@
     $( "#accordion" ).accordion({
       collapsible: true,
       heightStyle: "content"
+    });
+    $('.gallery-item').hover( function() {
+        $(this).find('.img-title').fadeIn(500);
+    }, function() {
+        $(this).find('.img-title').fadeOut(300);
     });
   });
   </script>

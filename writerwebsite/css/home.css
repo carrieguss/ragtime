@@ -1,0 +1,122 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}/* End normalize */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+    }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*
+===========================================================
+Body styles
+===========================================================
+*/
+
+body {
+  background-color: #F6F1EE;
+  color:black;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+p {
+  line-height: 1.5;
+}
+
+/*
+===========================================================
+Containers
+===========================================================
+*/
+
+.wrapper-head {
+  padding: 10px 25px;
+  background-color:white;
+  background-size: cover;
+  transition: all 0.25s;
+}
+.wrapper-body {
+  position: relative;
+  background-size: cover;
+  transition: all 0.25s;
+}
+
+/*
+===========================================================
+Background
+===========================================================
+*/
+
+img.bg {
+  position: absolute;
+  top:32px;
+  left: 20%;
+  right: 20%;
+  /* Set up proportionate scaling */
+  width: 60%;
+  height: auto;
+}
+
+/*
+===========================================================
+Nav styles
+===========================================================
+*/
+
+ul.nav {
+  position: fixed; /* posf (+ tab) */
+  right: -150px;
+  width: 150px;
+  list-style: none;
+  background: #222;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  height: 100%;
+  transition: all 0.25s;
+}
+li a {
+  clear: both;
+  float: left;
+  padding-left: 20px;
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color:white;
+  text-decoration: none;
+}
+input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"]:checked + ul.nav {
+  right: 0;
+}
+input[type="checkbox"]:checked ~ .wrapper-head {
+  margin-right: 150px; /* mr150 (+tab) */
+} /* using the tilda ~ instead of the + selects elements that follow instead of the single adjacent element (element right nextdoor). This pushes all content within the wrapper 150px to the right, so the navbar occupies its own top to bottom space. */
+input[type="checkbox"]:checked ~ .wrapper-body {
+  margin-right: 150px;
+}
+label[for="toggle"] {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  cursor: pointer;
+  float: right;
+  padding-top: 10px;
+}

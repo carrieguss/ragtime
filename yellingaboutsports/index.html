@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yelling</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="images/icon_4000.png">
+</head>
+
+<body>
+
+<header>
+  <h1>Sports.</h1>
+  <h2>All I really want is <span class="emph">sports</span>.</h2>
+  <h2>And in the morning it's <span class="emph">sports</span>.</h2>
+  <h2>Cause in the evening it's <span class="emph">sports.</span></h2>
+  <h2>Back in the day,</h2>
+  <h2>There were these <span class="emph">sports</span> around the way.</h2>
+  <h2>I didn't really want to play.</h2>
+  <h2>But could I watch? They said, "You may."</h2>
+  <h2>There are all kinds and that's OK.</h2>
+  <h2>The games are <span class="emph">"Home"</span> or they're <span class="emph">"Away."</span></h2>
+<!--   
+  <h2>All I really want is <span class="emph">sports</span>. And in the morning it's <span class="emph">sports</span>. Cause in the evening it's <span class="emph">sports.</span> Back in the day, There were these <span class="emph">sports</span> around the way. I wasn't good enough to play. But could I watch? They said, "You may." There are all kinds and that's OK. The games are <span class="emph">"Home"</span> or they're <span class="emph">"Away."</span></h2> -->
+  <h3>Let's yell about some <span class="emph"><a data-src="images/omgcant.gif">sports</a></span> today.</h2>
+</header>
+<!--
+ Major League Baseball: April - October 
+ NFL: September - February 
+ NBA: October - June 
+ NHL: October - June -->
+<div class="bodyWrap">
+  <div class="container clearfix" id="options">
+    <div class="toTheLeftToTheLeft">
+      <form>
+        <div class="sportsWrap">
+          <label for="sport">People seem to be talking about</label>
+              <select name="sport" id="sport">
+                <option value="baseball">baseball.</option>
+                <option value="basketball">basketball.</option>
+                <option value="football">football.</option>
+                <option value="hockey">hockey.</option>
+              </select>
+        </div>
+        <div class="cityWrap">
+          <label for "city">My heart belongs to</label>
+              <select name="city" id="city">
+                <option value="CALI">California.</option>
+                <option value="NY">New York.</option>
+                <option value="DS">the deep South.</option>
+                <option value="SE">the Southeast.</option>
+                <option value="MW">the Midwest.</option>
+                <option value="NE">the Northeast.</option>
+                <option value="NW">the Northwest.</option>
+                <option value="DC">the American government.</option>
+                <option value="TX">Texas</option>
+                <option value="TO">Toronto.</option>
+                <option value="MTL">Montreal.</option>
+                <option value="CAN">Hockey.</option>
+                <option value="DQ">the Motherf*cking Queen of England.</option>
+              </select>
+        </div>
+        <div class="feelingsYo">
+          <label for="emotion">I want to sound</label>
+              <select name="emotion" id="emotion">
+                <option value="smug">smug.</option>
+                <option value="mad">indignant.</option>
+                <option value="high">high?</option>
+                <option value="stoked">fucking STOKED</option>
+                <option value="pensive">pensive.</option>
+                <option value="weepy">weepy.</option>
+              </select>
+        </div>
+      </div><!-- End of dropdown options -->
+      
+      <button id="submit" type="submit">Start <br>Yelling</button>
+    
+    </form>
+  
+  </div> <!-- End #options container -->
+
+  <div class="container" id="yelling">
+    <div id="yellHere">
+      <h5 class="call">Shout<br>Shout<br>Shout</h5>
+      <p class="response">"I heard the Blue Jays fucking killed it in the 19th Inning YA WOO GO SPORTS."</p>
+    </div>
+   
+    <!-- <div id="basketball"><p></p></div> -->
+   
+    <!-- <div id="football"><p></p></div> -->
+   
+    <!-- <div id="hockey"><p></p></div> -->
+
+  </div> 
+
+  <div id="espnLegal">
+    <p>Built with DATA and SPORTS by <a href="http://carrieguss.com" target="_blank">Carrie Guss</a> using DATA and SPORTS pulled from the <img src="images/espn-red_50.png"> API.</p>
+  </div>
+
+</div> <!-- End bodyWrap container div thing -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/sportsapp.js"></script>
+     <script src="js/gifLinks.js"></script>
+    <script>
+      var elements = document.querySelectorAll( 'header a' );
+      GifLinks( elements );
+    </script>
+
+    
+  </body>
+</html>

@@ -18,12 +18,34 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
+.mega-wrapper-contact {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
 
 .menu-container {
   margin: 0;
   width: 100%;
   padding: 20px;
   overflow: hidden;
+}
+.menu-container-contact {
+  margin: 0;
+  width: 100%;
+  padding: 20px 50px;
+  overflow: hidden;
+  background-color: #333;
+  .logo {
+    h1 {
+      color: #eee;
+    }
+  }
+  ul {
+    &#main-nav li a {
+    color: #eee;
+   }
+  }
 }
 
 .logo {
@@ -245,7 +267,6 @@ ul {
       // width: 65%;
       // float: left;
       img {
-        z-index: 50;
         width: 100%;
         height: auto;
         border-radius: 5px;
@@ -349,6 +370,99 @@ ul {
   padding-left: 15px;
 }
 
+// EXPERIMENT
+
+/* Uncomment everything commented to CSS for the hide/show */
+
+// .gallery {
+    // width: 25em;
+    // margin: 2em auto;
+// }
+
+.gallery-item {
+    height: auto;
+    width: 100%;
+    // margin-bottom: 2em;
+    position: relative;
+    border-radius: 5px;
+}
+
+    // .gallery-item:first-child {
+    //     margin-right: 2.762430939%;
+    // }
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 5px
+}
+
+.gallery-item:hover .img-title {
+    /*opacity: 1;*/
+}
+.img-title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /*opacity: 0;*/
+    display: none; /* comment this out for CSS hover */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0px 20px;
+    border-radius: 5px;
+    /*transition: all 0.5s ease;*/
+}
+
+    .img-title h5 {
+        // position: absolute;
+        font-family: "Helvetica Neue", "Open Sans", "Lato",  Helvetica, sans-serif;
+        color: #000;
+        // top: 33%;
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        text-align: left;
+        span.head-tit {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 36px;
+          text-transform: uppercase;
+          padding-top: 0;
+          margin-top: 0;
+          border-bottom: 3px solid #ED0707;
+        }
+        span.linkto {
+          color: #ED0707;
+          border-bottom: 1px solid #ED0707;
+        }
+        // text-align: center;
+    }
+.body-wrapper-contact {
+  width: 100%;
+  padding: 0px 50px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.contact-content {
+//   width: 100%;
+  // .twitter-widget {
+  // width: 25%;
+  // float: right;
+  // padding-top: 20px;
+  // }
+  .contact-form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+// END EXPERIMENT
+
+
 // ******************************
 // Responsivate those styles, bud
 // ******************************
@@ -396,7 +510,16 @@ ul {
     }
   }
 }
-
+@media all and (max-width: 750px) {
+  .contact-content {
+    .twitter-widget {
+      display: none;
+    }
+    .contact-form {
+      width: 100%;
+    }
+  }
+}
 @media all and (max-width: 600px) {
   .menu-container {
     text-align: center;
@@ -499,4 +622,9 @@ ul {
     text-align: center;
     font-size: 14px;
   }
+.contact-content {
+  .contact-form {
+    width: 100%;
+  }
+}
 } // End max-width 600px

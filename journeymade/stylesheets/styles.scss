@@ -1,0 +1,534 @@
+@import "normalize";
+
+$basefont: helvetica, sans-serif;
+$platinum: #E3E3E1;
+$ocean: #549F66;
+$fern: #4F8510;
+$puke: #80A94E;
+$cucumber: #4B8256;
+$forest: #73AE80;
+
+/* Desktops */
+
+// -------------------------------------
+// BODY ELEMENTS
+// -------------------------------------
+
+body {
+	width: 100%;
+	background-color: $platinum;
+	color: #000;
+	font-family: $basefont;
+}
+.wrapper {
+	background-color: #fff;
+}
+.mobile-header {
+	display: none;
+	.mobile-nav {
+		display: none;
+	}
+}
+.main-content {
+	background-color: #fff;
+	width: 65%;
+	margin: 0;
+	padding: 50px;
+	float: left;
+}
+
+.sidebar {
+	background-image: url("../images/hero.jpg");
+	background-repeat: no-repeat;
+	background-position: top center; 
+	background-color: $platinum;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	width: 35%;
+}
+.sidebar-wrapper {
+	margin-top: 1030px;
+	padding: 0;
+}
+.side-footer {
+	padding-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	img {
+		max-width: 20%;
+	}
+	p {
+		font-size: 16px;
+		line-height: 26px;
+		color: darken($platinum, 40%);
+		&.little {
+			font-size: 12px;
+			line-height: 8px;
+		}
+	}
+	a {
+		color: #000;
+	}
+}
+
+// -------------------------------------------------
+// TYPOGRAPHY AND LINKS
+// -------------------------------------------------
+
+h1 {
+
+}
+
+h2 {
+	font-size: 42px;
+	font-weight: 300;
+	color: #000;
+	line-height: 54px;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 10px 0px;
+	font-weight: 300;
+	&.special {
+		color: #fff;
+	}
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 10px 0px;
+	&.special {
+		font-size: 16px;
+		font-weight: 300;
+		color: #fff;
+		margin: 25px;
+	}
+}
+p {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+	color: #444;
+	&.special {
+		color: #fff;
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: #00B480;
+	margin: 0;
+	padding: 0;
+}
+
+// =============================
+// NAV AND LISTS
+// =============================
+
+.header-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		font-weight: 200;
+		display: inline-block;
+		margin: 15px 0;
+		padding-right: 25px;
+	}
+}
+
+ol {
+	margin: 0;
+	margin-left: 25px;
+	padding: 0;
+	li {
+		color: #111;
+		font-size: 18px;
+		font-weight: 300;
+		position: relative;
+		padding: 25px;
+		border-top: 1px solid #CCC;
+		}
+		&:nth-child(2) {
+			border-bottom: 1px solid #CCC;
+			}
+}
+
+// ----------------------------
+// ADDITIONAL SIDEBAR STYLES
+// ----------------------------
+
+.logo-top {
+	max-width: 60%;
+	position: absolute;
+	z-index: 99;
+	margin: 50px 20%;
+}
+// .hero {
+//	max-width: 100%;
+//	position: absolute;
+//	top: 0;
+//	right: 0;
+//}
+
+//Create mixin
+
+@mixin boxstyles($color) {
+	width: 100%;
+	margin: 0;
+	padding: 20px;
+	background-color:($color);
+}
+
+//Include mixin
+
+.box1 {
+	@include boxstyles($ocean);
+}
+.box2 {
+	@include boxstyles($fern);
+}
+.box3 {
+	@include boxstyles($puke);
+}
+.box4 {
+	@include boxstyles($cucumber);
+}
+.box5 {
+	@include boxstyles($forest);
+}
+.box6 {
+	@include boxstyles(#eee);
+}
+
+svg {
+	fill: #fff;
+}
+
+// -------------------------------
+// TEAM SECTION STYLES
+// -------------------------------
+
+@mixin team($width, $margin) {
+	width:($width);
+	margin:($margin);
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+}
+
+.teamster {
+	@include team(45%, 1%);
+}
+
+.teamster-jr {
+	@include team(30%, 1%);
+	padding-top: 15px;
+	.social {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+		li {
+			font-size: 12px;
+			line-height: 20px;
+			font-weight: 300;
+	}
+}
+
+.team img {
+	max-width: 100%;
+}
+
+.social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 300;
+	}
+}
+
+// -------------------------------------
+// PROJECT INQUIRY
+// -------------------------------------
+
+#project-inquiry {
+	clear:both;
+	p {
+		font-size: 12px;
+		color: #888;
+	}
+}
+
+// -------------------------------------
+// CONTACT FORM
+// -------------------------------------
+
+label {
+	font-size: 24px;
+	font-weight: 300;
+	color: darken($platinum, 10%);
+	margin: 25px 0px;
+}
+input {
+	border: none;
+	font-size: 24px;
+	font-weight: 300;
+	padding-left: 25px;
+	&:focus {
+		outline: none;
+	}
+}
+textarea {
+	font-size: 14px;
+	font-weight: 300;
+	border: 1px solid #000;
+	width: 100%;
+	height: 200px;
+	margin: 10px 0px 25px 0px;
+	padding: 10px;
+	&:focus {
+		outline: none;
+	}
+}
+.formBox {
+	border-bottom: 1px solid #000;
+	width: 100%;
+	padding: 30px 0px 5px 0px;
+}
+.formDesc {
+	width: 100%;
+	padding: 30px 0px 5px 0px;
+}
+
+#contact {
+	margin-top: 100px;
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+	h3 {
+		color: darken($platinum, 50%);
+	}
+}
+.submit {
+	background-color: rgb(0, 180, 128);
+	padding: 15px 40px;
+	border-radius: 2px;
+	font-size: 26px;
+	font-weight: 300;
+	color: #fff;
+	box-shadow: 0px 1px 0px #777;
+}
+
+// ====================================================
+/* RESPONSIVATE: PORTRAIT TABLET AND SMALL DESKTOPS */
+// ==================================================
+
+@media (max-width: 940px) {
+	.main-content {
+	width: 60%;
+	}
+	.header-nav {
+		padding-bottom: 20px;
+		li {
+			font-size: 22px;
+			padding-right: 0;
+			&:nth-child(1) {
+				padding-right: 50px;
+			}
+		}
+	}
+	.intro {
+		p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.sidebar {
+		width: 40%;
+	}
+	.teamster {
+		width: 98%;
+		margin: 1%;
+	}
+	.teamster-jr {
+		width: 45%;
+		margin: 1%;
+	}
+
+#proj-inq {
+	h2 {
+		margin: 0;
+		padding: 0;
+		font-size: 24px;
+	}
+}
+
+label {
+	font-size: 18px;
+	font-weight: 300;
+	color: darken($platinum, 10%);
+	margin: 0px;
+	width: 30%;
+}
+input {
+	width: 70%;
+	border: none;
+	font-size: 18px;
+	font-weight: 300;
+	padding-left: 25px;
+	&:focus {
+		outline: none;
+	}
+}
+textarea {
+	font-size: 14px;
+	font-weight: 300;
+	border: 1px solid #000;
+	width: 100%;
+	height: 200px;
+	margin: 10px 0px 25px 0px;
+	padding: 10px;
+	&:focus {
+		outline: none;
+	}
+}
+.formBox {
+	border-bottom: 1px solid #000;
+	width: 100%;
+	padding: 15px 0px 2.5px 0px;
+}
+.formDesc {
+	width: 100%;
+	padding: 30px 0px 5px 0px;
+}
+
+#contact {
+	margin-top: 100px;
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+	h3 {
+		color: darken($platinum, 50%);
+	}
+}
+.submit {
+	background-color: rgb(0, 180, 128);
+	padding: 15px 40px;
+	border-radius: 2px;
+	font-size: 26px;
+	font-weight: 300;
+	color: #fff;
+	box-shadow: 0px 1px 0px #777;
+}
+
+//	body {
+//		background-image: url("../images/fpo-modalcover-2x.jpg");
+//		background-repeat: no-repeat;
+//		width: 100%;
+//		margin: 0;
+//		padding: 0;
+//	}
+//	.main-content {
+//		margin-top: 500px;
+//	}
+//	.sidebar {
+//		margin-top: 500px;
+//	}
+//
+//	.header-nav {
+//		li {
+//			font-size: 24px;
+//			font-weight: 400;
+//			padding: 10px 75px 30px 0px;
+//		}
+	
+}
+
+// ====================================================
+/* RESPONSIVATE: LANDSCAPE PHONE TO PORTRAIT TABLET */
+// ==================================================
+
+@media all and (max-width: 768px) {
+
+	.tagline {
+		h2 {
+		font-size: 42px;
+		font-weight: 300;
+		color: #000;
+		line-height: 54px;
+		}
+	}
+	h2 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	h3 {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.team {
+		ul {
+			li {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+	}
+}
+
+// ===========================================
+/* RESPONSIVATE: LANDSCAPE PHONES AND DOWN */
+// =========================================
+
+@media all and (max-width: 550px) {
+/*	.logo-top {
+	max-width: 30%;
+	position: relative;
+	z-index: 99;
+	margin: 30px 35%;
+}
+	.mobile-header {
+	position: absolute;
+	z-index: 98;
+		.mobile-nav {
+			float: left;
+		}
+	} */
+
+	.main-content {
+		margin-top: 2600px;
+		width: 100%;
+		.header-nav {
+			display: none;
+		}
+	}
+	.sidebar {
+		position: block;
+		clear: both;
+		width: 100%;
+	}
+	h2 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	h3 {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	#project-inquiry {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}

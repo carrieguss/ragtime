@@ -1,0 +1,312 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background: #eee;
+  color: #567A91;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header {
+  background: #fff;
+}
+footer {
+  background: #fff;
+}
+
+article.about {
+  /*overflow: hidden;*/
+  background-color: #fff;
+  width: 95%;
+  padding: 20px;
+  margin: 2.5%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+img {
+  width: 40%;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+article.sidebar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  width: 30%;
+  float: left;
+}
+
+.left-sidebar {
+  width: 10%;
+  margin-left: 5%;
+}
+.pubs {
+  width: 80%;
+  float: right;
+  margin-left: 5%;
+}
+.pigeons {
+  width: 90%%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container-body {
+  margin: 0 auto;
+  padding: 10px;
+}
+.contact-form {
+  width: 60%;
+  float: left;
+  margin: 0 auto;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h4 {
+  color: #092E85;
+}
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  color: #444;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+h2.contact {
+  text-transform: uppercase;
+  line-height: 80px;
+  margin-left: 5%;
+}
+h3 {
+  color: #85efff;
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  color: #9C0C1B;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+strong {
+  font-weight: 400;
+}
+cite,
+em {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a {
+  text-decoration: none;
+}
+header a,
+footer a {
+  color: #000;
+}
+header a:hover,
+footer a:hover {
+  color: #80D4E0;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.logo {
+  border-top: 4px solid #1bb8e4;
+  float: left;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 0.85;
+  padding: 20px 0 20px 0;
+  text-transform: uppercase;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+nav {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+nav a {
+  padding: 7px;
+}
+nav a:hover {
+  color: #000;
+  border-bottom: 2px solid #80D4E0;
+  padding: 7px;
+}
+nav li {
+  display: inline-block;
+  margin: 20px;
+}
+
+/*
+  ========================================
+  Contact Form
+  ========================================
+*/
+
+input {
+  margin-left: 5%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background-color: #fff;
+  display: inline-block;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid #000;
+  box-shadow: 0px 0px 10px #0F0101;
+}
+input.name {
+  margin-right: 2%;
+}
+input.name, 
+input.lastname {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+textarea {
+  margin-left: 5%;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+input.email {
+  clear: both;
+  width: 70%;
+  margin-bottom: 50px;
+}
+input.submit {
+width: 19%;
+}
+

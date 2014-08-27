@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background: #fff;
+  color: #000;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container-body {
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid #ccc;
+}
+.left-sidebar {
+  display: inline;
+  float: left;
+  width: 25%;
+}
+.wrapper {
+  width:100%;
+  margin:0 auto;
+  overflow: hidden;
+}
+.wrapper img {
+  max-width: 10%;
+  float:left;
+  margin:25px;
+}
+.pubs {
+  width: 70%;
+  display: inline;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 25px;
+}
+.pigeons {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.footer {
+  border-top: 1px solid #ccc;
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+}
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Lists and Links
+  ========================================
+*/
+
+li {
+  font-size: 16px;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: #80D4E0;
+}
+header a,
+footer a {
+  color: #000;
+}
+header a:hover,
+footer a:hover {
+  color: #80D4E0;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h2 {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.logo {
+  border-top: 4px solid #1bb8e4;
+  float: left;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 0.85;
+  padding: 20px 0 20px 0;
+  text-transform: uppercase;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+nav {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+nav a {
+  padding: 7px;
+}
+nav a:hover {
+  color: #000;
+  border-bottom: 2px solid #80D4E0;
+  padding: 7px;
+}
+nav li {
+  display: inline-block;
+  margin: 20px;
+}
